@@ -10,7 +10,6 @@ var_perform_update=true
 var_download_basic_tools=true
 var_generate_ssh=true
 var_instal_zsh=true
-var_zsh_history_path="~/.zsh_histfile"
 
 # GUNCELLEMELER
 ###############
@@ -82,3 +81,5 @@ if [ "$var_instal_zsh" = true ] ; then
 else
     echo "ZSH Kurulumu Atlandi";
 fi
+
+# TODO: VSCode
