@@ -42,7 +42,7 @@ if [ "$var_perform_update" = true ] ; then
     
     # Install development tools
     sudo apt install -y build-essential
-    sudo apt install -y cmake ninja
+    sudo apt install -y cmake ninja-build
     
     # Install other tools
     sudo apt install -y curl zip unzip tar
