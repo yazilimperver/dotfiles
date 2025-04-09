@@ -23,13 +23,24 @@ Kurulum için en azından aşağıdaki uygulamalar kurulu olmalıdır.
 * Curl
 
 ### Kurulum Adımları
-Öncelikli olarak gerekli kurulumları yapmak için aşağıdaki komutu çağırıyoruz:
+Kurulumları tamamlamak için aşağıdaki adımları izleyeceğiz:
+
+Fontları kuralım:
+
+```console
+mkdir -p .local/share/fonts
+curl https://raw.githubusercontent.com/yazilimperver/dotfiles/refs/heads/main/.scripts/install_font.sh -o install_font.sh
+./install_font.sh latest
+```
+
+Uygulamaları ve temel hazırlıkları yapalım:
 
 ```console
 curl -Lks https://raw.githubusercontent.com/yazilimperver/dotfiles/refs/heads/main/.scripts/bootstrap.sh | /bin/bash
 ```
 
 Dot dosyalarını içeren repoyu indirimek ve gerekli ayarlamaları yapmak için aşağıdaki betiği çağırıyoruz:
+
 ```console
 curl -Lks https://raw.githubusercontent.com/yazilimperver/dotfiles/refs/heads/main/.scripts/install_dots.sh | /bin/bash
 ```
