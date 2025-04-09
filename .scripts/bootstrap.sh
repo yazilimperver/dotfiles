@@ -81,5 +81,11 @@ if [ "$var_instal_zsh" = true ] ; then
 else
     echo "ZSH Kurulumu Atlandi";
 fi
+# YARDIMCI ARACLAR
+# colorls, https://github.com/athityakumar/colorls
+# Bunun oncesinde gcc ve make kurulu olmalı
+# Install ruby:
+sudo apt install -y ruby ruby-dev git
+sudo gem install colorls
 
 # TODO: VSCode
