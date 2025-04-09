@@ -6,10 +6,10 @@ set -eu
 var_username="dotuser"
 var_home="/home/${var_username}";
 var_ssh_comment="ssh comment yazilimperver@yazilimperver.com";
-var_perform_update=false
-var_download_basic_tools=false
+var_perform_update=true
+var_download_basic_tools=true
 var_generate_ssh=true
-var_instal_zsh=false
+var_instal_zsh=true
 var_zsh_history_path="~/.zsh_histfile"
 
 # GUNCELLEMELER
@@ -34,22 +34,22 @@ free -m
 ##################
 if [ "$var_perform_update" = true ] ; then
     echo "Temel Yuklemeler Yapılacak";
-
+    
     # Install stow
     sudo apt install -y stow
-
+    
     # Install vim
     sudo apt install -y vim
-
+    
     # Install development tools
     sudo apt install -y build-essential
     sudo apt install -y cmake ninja
-
+    
     # Install other tools
     sudo apt install -y curl zip unzip tar
     sudo apt install -y htop btop
     sudo apt install -y tmux
-
+    
     echo "Temel Yuklemeler Tamamlandi";
 else
     echo "Temel Yuklemeler Atlandi";
@@ -62,7 +62,7 @@ if [ "$var_generate_ssh" = true ] ; then
     ssh-keygen -t ed25519 -C "${var_ssh_comment}"
     eval "$(ssh-agent -s)"
     ssh-add ${var_home}/.ssh/id_ed25519
-    cat ${var_home}/.ssh/id_ed25519.pub 
+    cat ${var_home}/.ssh/id_ed25519.pub
     echo "SSH Anahtari Olusturuldu ve Clipboarda Kopyalandi";
 else
     echo "SSH Anahtari Olusturma Atlandi";
@@ -72,13 +72,13 @@ fi
 ######################
 if [ "$var_instal_zsh" = true ] ; then
     echo "ZSH Kurulacak";
-
+    
     sudo apt install -y zsh
     zsh --version
-
+    
     # Shelli varsayilan olarak ayarlayalim
     echo $SHELL
-
+    
 else
     echo "ZSH Kurulumu Atlandi";
 fi
