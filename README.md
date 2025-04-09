@@ -24,10 +24,15 @@ Kurulum için en azından aşağıdaki uygulamalar kurulu olmalıdır.
 
 ### Kurulum Adımları
 Öncelikli olarak gerekli kurulumları yapmak için aşağıdaki komutu çağırıyoruz:
+
+```console
 curl -Lks https://raw.githubusercontent.com/yazilimperver/dotfiles/refs/heads/main/.scripts/bootstrap.sh | /bin/bash
+```
 
 Dot dosyalarını içeren repoyu indirimek ve gerekli ayarlamaları yapmak için aşağıdaki betiği çağırıyoruz:
-curl -Lks https://raw.githubusercontent.com/yazilimperver/dotfiles/blob/main/.scripts/install_dots.sh | /bin/bash
+```console
+curl -Lks https://raw.githubusercontent.com/yazilimperver/dotfiles/refs/heads/main/.scripts/install_dots.sh | /bin/bash
+```
 
 ## Kaynaklar
 * [Hacker News](https://news.ycombinator.com/item?id=11070797) - Burada bahsedilen yöntem.
