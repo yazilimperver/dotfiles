@@ -78,9 +78,18 @@ if [ "$var_instal_zsh" = true ] ; then
     # Shelli varsayilan olarak ayarlayalim
     echo $SHELL
     
+    # OhMyZsh Kurulum
+    sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    
+    # PowerLevel10K
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+    
+    # zsh-syntax-hightlighting, https://github.com/zsh-users/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 else
     echo "ZSH Kurulumu Atlandi";
 fi
+
 # YARDIMCI ARACLAR
 # colorls, https://github.com/athityakumar/colorls
 # Bunun oncesinde gcc ve make kurulu olmalı
