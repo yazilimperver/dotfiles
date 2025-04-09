@@ -3,7 +3,7 @@
 set -eu
 
 # Kontrol degiskenleri
-var_username="dotuser"
+var_username="yazilimperver"
 var_home="/home/${var_username}";
 var_ssh_comment="ssh comment yazilimperver@yazilimperver.com";
 var_perform_update=true
