@@ -58,7 +58,7 @@ fi
 ######################
 if [ "$var_generate_ssh" = true ] ; then
     echo "SSH Anahtari Olusturulacak";
-    ssh-keygen -t ed25519  -N "" -C "${var_ssh_comment}"
+    ssh-keygen -t ed25519  -N "" -f  ~/.ssh/id_ed25519 -C "${var_ssh_comment}"
     eval "$(ssh-agent -s)"
     ssh-add ${var_home}/.ssh/id_ed25519
     cat ${var_home}/.ssh/id_ed25519.pub
@@ -73,7 +73,6 @@ if [ "$var_instal_zsh" = true ] ; then
     echo "ZSH Kurulacak";
     
     sudo apt install -y zsh
-    zsh --version
     
     # Shelli varsayilan olarak ayarlayalim
     echo $SHELL
