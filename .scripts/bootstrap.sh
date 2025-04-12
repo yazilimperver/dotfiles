@@ -74,9 +74,6 @@ if [ "$var_instal_zsh" = true ] ; then
     
     sudo apt install -y zsh
     
-    # Shelli varsayilan olarak ayarlayalim
-    chsh -s $(which zsh)
-    
     # OhMyZsh Kurulum
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
     
@@ -100,3 +97,6 @@ sudo apt install -y ruby ruby-dev git
 sudo gem install colorls
 
 # TODO: VSCode
+
+#SHELL'ı ayarlayalım
+sudo chsh -s $(which zsh) $USER
