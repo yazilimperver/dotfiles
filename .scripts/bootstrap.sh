@@ -85,6 +85,11 @@ if [ "$var_instal_zsh" = true ] ; then
     
     # zsh-autosuggestions, https://github.com/zsh-users/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    
+    # zsh tamamlama dosyalarının yerini değiştirelim ve oluşanları da silelim
+    # https://stackoverflow.com/questions/62931101/i-have-multiple-files-of-zcompdump-why-do-i-have-multiple-files-of-these
+    sed -i -e "/source \$ZSH\/oh-my-zsh.sh/i export ZSH_COMPDUMP=\$ZSH\/cache\/.zcompdump-\$HOST" ~/.zshrc
+    rm .zcompdump* -y
 else
     echo "ZSH Kurulumu Atlandi";
 fi
