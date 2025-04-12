@@ -77,6 +77,9 @@ if [ "$var_instal_zsh" = true ] ; then
     # Shelli varsayilan olarak ayarlayalim
     echo $SHELL
     
+    RUNZSH=NO
+    KEEP_ZSHRC=YES
+    
     # OhMyZsh Kurulum
     sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     
