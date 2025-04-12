@@ -1,5 +1,7 @@
+[core]
+        autocrlf = true
 [init]
-	defaultBranch = main
+        defaultBranch = main
 [user]
         email = yazilimperver@gmail.com
         name = yazilimperver
