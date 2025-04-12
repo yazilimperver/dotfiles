@@ -28,8 +28,9 @@ Kurulumları tamamlamak için aşağıdaki adımları izleyeceğiz:
 Fontları kuralım:
 
 ```console
-mkdir -p .local/share/fonts
+mkdir -p .local/share
 curl https://raw.githubusercontent.com/yazilimperver/dotfiles/refs/heads/main/.scripts/install_font.sh -o install_font.sh
+chmod +x install_font.sh
 ./install_font.sh latest
 ```
 
