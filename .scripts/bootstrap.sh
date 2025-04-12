@@ -75,19 +75,19 @@ if [ "$var_instal_zsh" = true ] ; then
     sudo apt install -y zsh
     
     # Shelli varsayilan olarak ayarlayalim
-    echo $SHELL
-    
-    RUNZSH=NO
-    KEEP_ZSHRC=YES
+    chsh -s $(which zsh)
     
     # OhMyZsh Kurulum
-    sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
     
     # PowerLevel10K
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
     
     # zsh-syntax-hightlighting, https://github.com/zsh-users/zsh-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    
+    # zsh-autosuggestions, https://github.com/zsh-users/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 else
     echo "ZSH Kurulumu Atlandi";
 fi
