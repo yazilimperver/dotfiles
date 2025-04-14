@@ -49,6 +49,20 @@ Bütün kurulumları tek seferde yapmak için:
 curl -Lks https://raw.githubusercontent.com/yazilimperver/dotfiles/refs/heads/main/.scripts/setup.sh | /bin/bash
 ```
 
+## Dosyalar
+Bu repodaki önemli dosyalar:
+
+İsim                                | Açıklama
+---                                 | ---
+[.bashrc](/.bashrc)                 | Bash ayarları `~/.bashrc
+[.zshrc](/.zshrc)                   | ZSH ayarları `~/.zshrc
+[.p10k.zsh](/.p10k.zsh)             | P10K konfigürasyon ayarlar `~/.p10k.zsh
+[.aliases](/.aliases.sh)            | Bash ve ZSH ile kullanılabilecek, çeşitli repolardan ve kullanıcılardan toparlanan komut kısaltmaları. Bunlar `~/.bashrc` ya da `~/.zshrc`'ye eklenebilir ya da source ile kullanılabilir `~/.aliases`
+[.gitconfig](/.gitconfig)      | Global git ayarları`~/.gitconfig`.
+[.gitignore](/.gitignore.sh)        | Global git ignore değerleri  `~/.gitignore`.
+
+
+
 ## Kaynaklar
 * [Hacker News](https://news.ycombinator.com/item?id=11070797) - Burada bahsedilen yöntem.
 * [Wikipedia](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory) - Dot Files Wikipedia sayfası.
