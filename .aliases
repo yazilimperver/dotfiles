@@ -131,3 +131,6 @@ alias fnf='find .  -type f -name'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
+
+# Gizli dosyaları direk göstermek için kullanılabilecek komut
+alias hidden='ls -a | grep "^\."'
